@@ -41,7 +41,7 @@ class NewQuestion extends Component {
           <div>
             <input
               className="input-option center"
-              placeholder='Enter option 1'
+              placeholder="Enter option 1"
               value={optionOne}
               onChange={this.handleChangeOptionOne} />
           </div>
@@ -49,12 +49,12 @@ class NewQuestion extends Component {
           <div style={{ marginBottom: '20px' }}>
             <input
               className="input-option center"
-              placeholder='Enter option 2'
+              placeholder="Enter option 2"
               value={optionTwo}
               onChange={this.handleChangeOptionTwo} />
           </div>
           <div>
-            <input type='submit' value='Submit' className="btn" disabled={optionOne === '' || optionTwo === ''} />
+            <input type="submit" value="Submit" className="btn" disabled={optionOne === '' || optionTwo === ''} />
           </div>
         </form>
       </div>

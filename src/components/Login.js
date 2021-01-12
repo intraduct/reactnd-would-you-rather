@@ -29,7 +29,7 @@ class Login extends Component {
           {loading ? null :
             <form onSubmit={this.handleSubmit}>
               <select value={this.state.value} onChange={this.handleChange} >
-                <option disabled value=''> -- Select a user -- </option>
+                <option disabled value=""> -- Select a user -- </option>
                 {users.map(user => (
                   <option value={user.id} key={user.id}>{user.name}</option>
                 ))}

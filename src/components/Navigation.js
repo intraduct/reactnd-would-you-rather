@@ -11,22 +11,22 @@ const Navigation = ({ authedUser, dispatch }) => {
   }
 
   return (
-    <nav className='nav'>
+    <nav className="nav">
       <ul>
         <li>
-          <NavLink to='/' exact activeClassName='active'>
+          <NavLink to="/" exact activeClassName="active">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to='/add' activeClassName='active'>
+          <NavLink to="/add" activeClassName="active">
             New Question
         </NavLink>
         </li>
         <li>
-          <NavLink to='/Leaderboard' activeClassName='active'>
+          <NavLink to="/leaderboard" activeClassName="active">
             Leaderboard
-        </NavLink>
+          </NavLink>
         </li>
         {authedUser ?
           <Fragment>
@@ -36,7 +36,7 @@ const Navigation = ({ authedUser, dispatch }) => {
             <li style={{ float: 'right' }}>
               <div>
                 Hi {authedUser.name}!
-            </div>
+              </div>
             </li>
           </Fragment> : null}
       </ul>

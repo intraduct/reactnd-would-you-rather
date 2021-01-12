@@ -25,10 +25,10 @@ class App extends Component {
         {this.props.login === true ?
           <Login /> :
           <Switch>
-            <Route path='/' exact component={QuestionList} />
-            <Route path='/questions/:qid' component={QuestionDetails} />
-            <Route path='/add' component={NewQuestion} />
-            <Route path='/leaderboard' component={Leaderboard} />
+            <Route path="/" exact component={QuestionList} />
+            <Route path="/questions/:qid" component={QuestionDetails} />
+            <Route path="/add" component={NewQuestion} />
+            <Route path="/leaderboard" component={Leaderboard} />
             <Route component={NotFound} />
           </Switch>}
       </Router>
