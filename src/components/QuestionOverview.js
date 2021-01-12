@@ -16,7 +16,7 @@ const QuestionOverview = ({ question, author }) => {
       </div>
     </div>
   )
-}
+};
 
 const mapStateToProps = ({ questions, users }, { id }) => {
   const question = questions[id]
@@ -26,6 +26,6 @@ const mapStateToProps = ({ questions, users }, { id }) => {
     question,
     author
   }
-}
+};
 
 export default connect(mapStateToProps)(QuestionOverview)

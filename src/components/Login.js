@@ -12,12 +12,12 @@ class Login extends Component {
     this.setState({
       value: e.target.value
     })
-  }
+  };
 
   handleSubmit = e => {
     this.props.dispatch(handleSetAuthedUser(this.state.value))
     e.preventDefault()
-  }
+  };
 
   render() {
     let { users, loading } = this.props

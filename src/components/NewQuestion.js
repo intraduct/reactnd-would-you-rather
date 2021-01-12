@@ -15,19 +15,19 @@ class NewQuestion extends Component {
     const { optionOne, optionTwo } = this.state
     this.props.dispatch(handleAddQuestion(optionOne, optionTwo))
     this.props.history.push('/')
-  }
+  };
 
   handleChangeOptionOne = e => {
     this.setState({
       optionOne: e.target.value
     })
-  }
+  };
 
   handleChangeOptionTwo = e => {
     this.setState({
       optionTwo: e.target.value
     })
-  }
+  };
 
   render() {
     const { optionOne, optionTwo } = this.state

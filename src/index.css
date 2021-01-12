@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
 
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: rgb(255, 251, 211);
   margin: 0;
   padding: 0;
@@ -95,7 +95,7 @@ html, body {
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 ul {
@@ -138,7 +138,7 @@ li {
   width: auto;
   height: auto;
   margin: 25px auto 15px auto;
-  background-color: #FFF
+  background-color: #fff;
 }
 
 .card .left-card .author-name {

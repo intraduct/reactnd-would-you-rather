@@ -17,14 +17,14 @@ class QuestionList extends Component {
     this.setState({
       displayUnanswered
     })
-  }
+  };
 
   getQuestionsForDisplay = () => {
     let { questionIds, authedUser } = this.props
     let answeredQuestionIds = Object.keys(authedUser.answers)
     let unansweredQuestionIds = questionIds.filter(qId => !answeredQuestionIds.includes(qId))
     return this.state.displayUnanswered ? unansweredQuestionIds : answeredQuestionIds
-  }
+  };
 
   render() {
     let displayQuestions = this.getQuestionsForDisplay()

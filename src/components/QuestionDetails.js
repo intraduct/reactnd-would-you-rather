@@ -16,7 +16,7 @@ class QuestionDetail extends Component {
     this.setState({
       answer: e.target.value
     })
-  }
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -26,7 +26,7 @@ class QuestionDetail extends Component {
     const qid = question.id
 
     dispatch(handleQuestionAnswer({ authedUser, qid, answer }))
-  }
+  };
 
   isOptionChecked(option) {
     const { users, authedUser, question } = this.props
@@ -62,9 +62,8 @@ class QuestionDetail extends Component {
           <h3>Would you rather...</h3>
           <form onSubmit={this.handleSubmit}>
             <div className="container-result">
-              {showResult === true ?
-                <div className="option-one" style={{ width: `${percentageOptionOne}%` }} />
-                : null}
+              {showResult &&
+                <div className="option-one" style={{ width: `${percentageOptionOne}%` }} />}
               <div className="overlay-left">
                 <input
                   type="radio"
@@ -76,15 +75,14 @@ class QuestionDetail extends Component {
                   onChange={this.handleChange} />
                 <label htmlFor="radio-one" >... {question.optionOne.text}</label>
               </div>
-              {showResult === true ?
+              {showResult &&
                 <div className="overlay-right">
                   {percentageOptionOne}% ({votesOptionOne}/{votesTotal} votes)
-              </div> : null}
+                </div>}
             </div>
             <div className="container-result">
-              {showResult === true ?
-                <div className="option-two" style={{ width: `${percentageOptionTwo}%` }} />
-                : null}
+              {showResult &&
+                <div className="option-two" style={{ width: `${percentageOptionTwo}%` }} />}
               <div className="overlay-left">
                 <input
                   type="radio"
@@ -96,14 +94,12 @@ class QuestionDetail extends Component {
                   onChange={this.handleChange} />
                 <label htmlFor="radio-two" >... {question.optionTwo.text}</label>
               </div>
-              {showResult === true ?
+              {showResult &&
                 <div className="overlay-right">
                   {percentageOptionTwo}% ({votesOptionTwo}/{votesTotal} votes)
-              </div>
-                : null}
+              </div>}
             </div>
-            {showResult === true ?
-              null :
+            {!showResult &&
               <button type="submit" className="btn" disabled={this.state.answer === ''}>Submit</button>}
           </form>
         </div>
@@ -124,6 +120,6 @@ const mapStateToProps = ({ questions, users, authedUser }, props) => {
     author,
     showResult: question ? (question.optionOne.votes.includes(authedUser) || question.optionTwo.votes.includes(authedUser)) : false
   }
-}
+};
 
 export default connect(mapStateToProps)(QuestionDetail)

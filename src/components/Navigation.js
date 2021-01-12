@@ -8,7 +8,7 @@ const Navigation = ({ authedUser, dispatch }) => {
 
   const logout = () => {
     dispatch(handleSetAuthedUser(null))
-  }
+  };
 
   return (
     <nav className="nav">
@@ -46,6 +46,6 @@ const Navigation = ({ authedUser, dispatch }) => {
 
 const mapStateToProps = ({ authedUser, users }) => ({
   authedUser: users[authedUser]
-})
+});
 
 export default connect(mapStateToProps)(Navigation)
