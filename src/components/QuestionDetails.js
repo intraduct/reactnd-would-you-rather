@@ -25,6 +25,10 @@ class QuestionDetail extends Component {
     const { authedUser, question, dispatch } = this.props
     const qid = question.id
 
+    this.setState({
+      answer: ''
+    })
+
     dispatch(handleQuestionAnswer({ authedUser, qid, answer }))
   };
 
